@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <ul>
+        {{range $key,$value := .couples}}
+        <li><a href="/c/{{$value.CoupleId}}" target="_blank">{{$value.HusbandName}}+{{$value.WifeName}}({{$value.Alive}})</li>
+        {{end}}
+    </ul>
+</body>
+</html>
