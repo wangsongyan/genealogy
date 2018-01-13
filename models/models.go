@@ -58,7 +58,7 @@ var DB *gorm.DB
 
 func InitDB() (*gorm.DB, error) {
 	//db, err := gorm.Open("sqlite3", "wblog.db?_loc=Asia/Shanghai")
-	db, err := gorm.Open("mysql", "root:mysql@/genealogy?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:mysql@tcp(localhost:3306)/genealogy?charset=utf8&parseTime=True&loc=Local")
 	if err == nil {
 		DB = db
 		db.LogMode(true)
